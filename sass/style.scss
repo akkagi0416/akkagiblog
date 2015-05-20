@@ -17,9 +17,12 @@ h1,h2,h3,h4,h5,h6{
 	// @include rhythm-margins(0, 1);
 	//@include debug-vertical-alignment;
 }
-h1{ @include adjust-font-size-to(48px, 2); }
-h2{ @include adjust-font-size-to(36px, 2); }
-h3{ @include adjust-font-size-to(24px, 1); }
+// h1{ @include adjust-font-size-to(48px, 2); }
+// h2{ @include adjust-font-size-to(36px, 2); }
+// h3{ @include adjust-font-size-to(24px, 1); }
+h1{ @include adjust-font-size-to(24px, 1); }
+h2{ @include adjust-font-size-to(16, 1); }
+h3{ @include adjust-font-size-to(16, 1); }
 hgroup h2,h4,h5,h6{ @include adjust-font-size-to(24px, 1); }
 p{ @include adjust-font-size-to(16px, 1); }
 pre{ @include adjust-font-size-to(14px, 0.8); }
@@ -27,19 +30,23 @@ pre{ @include adjust-font-size-to(14px, 0.8); }
 $category_num : 4;
 
 header{
-	// h1{
-	// 	height: 32px;
-	// 	margin: 0;
-	// 	padding: 15px 0px 0px 50px;
-	// 	line-height: 1.0;
-	// 	font-size: 1em;
-	// 	letter-spacing: -1px;
-	// 	background: url('img/logo.svg') no-repeat 10px 5px;
-	// 	background-size: 32px 32px;
-	// }
+	h1{
+		height: 24px;
+        padding-left: 44px;
+		// letter-spacing: -1px;
+        @include adjust-font-size-to(16px, 1);
+		background: url('img/logo.svg') no-repeat 10px 0px;
+		background-size: 24px 24px;
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+        }
+	}
 	nav{
 		ul{
 			overflow: hidden;
+            margin: 0 auto;
 			padding: 0;
 
 			li{
@@ -88,6 +95,50 @@ header{
 	}
 }
 
+#main{
+    article{
+        overflow: hidden;
+        padding-top: 5px;
+        border-bottom: 1px solid #eee;
+        box-sizing: border-box;
+        .thumbnail{
+            float: left;
+            width: 20%;
+            padding: 4px 2%;
+            text-align: center;
+            img{
+                width: 100%;
+                max-width: 150px;
+            }
+        }
+        .content{
+            float: left;
+            overflow: hidden;
+            width: 72%;
+            margin-right: 2%;
+            h2{
+                @include adjust-font-size-to(14px, 0.5);
+                @include rhythm-margins(0, 0);
+                @include rhythm-padding(0.3, 0.1);
+                white-space: nowrap;
+                color: #333;
+            }
+            p{
+                @include adjust-font-size-to(12px, 0.5);
+                @include rhythm-margins(0, 0);
+                @include rhythm-padding(0.2, 0.2);
+                white-space: nowrap;
+                color: #333;
+            }
+            time{
+                @include adjust-font-size-to(11px, 0.5);
+                @include rhythm-margins(0, 0);
+                @include rhythm-padding(0.2, 0.2);
+                color: #999;
+            }
+        }
+    }
+}
 pre{
 	border: 1px solid #eee;
 	@include rhythm(1, 1, 1, 1 );
