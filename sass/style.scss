@@ -7,6 +7,8 @@
 //@import 'compass/reset';
 @import '_normalize.scss';
 
+$category_num : 4;
+
 // typography
 $base-font-size: 16px;
 $base-line-height: 24px;
@@ -23,11 +25,13 @@ h1,h2,h3,h4,h5,h6{
 h1{ @include adjust-font-size-to(24px, 1); }
 h2{ @include adjust-font-size-to(16, 1); }
 h3{ @include adjust-font-size-to(16, 1); }
-hgroup h2,h4,h5,h6{ @include adjust-font-size-to(24px, 1); }
+hgroup h2,h4,h5,h6{ @include adjust-font-size-to(16px, 1); }
 p{ @include adjust-font-size-to(16px, 1); }
 pre{ @include adjust-font-size-to(14px, 0.8); }
 
-$category_num : 4;
+h1,h2,h3,h4,h5,h6,p,td,th,pre{
+    color: #333;
+}
 
 header{
 	h1{
@@ -121,14 +125,12 @@ header{
                 @include rhythm-margins(0, 0);
                 @include rhythm-padding(0.3, 0.1);
                 white-space: nowrap;
-                color: #333;
             }
             p{
                 @include adjust-font-size-to(12px, 0.5);
                 @include rhythm-margins(0, 0);
                 @include rhythm-padding(0.2, 0.2);
                 white-space: nowrap;
-                color: #333;
             }
             time{
                 @include adjust-font-size-to(11px, 0.5);
@@ -139,8 +141,43 @@ header{
         }
     }
 }
+#main.single{
+    margin: 0 1em;
+    article{
+        overflow: auto;
+        border-bottom-style: none;
+        p, li{
+            @include adjust-font-size-to(14px, 1);
+        }
+        time{
+            color: #999;
+        }
+        ul{
+            padding: 0 0 0 2em;
+        }
+        table{
+            th,td{
+                padding-left: 1em;
+                padding-right: 1em;
+                @include adjust-font-size-to(12px, 1);
+            }
+            th{
+                border-bottom: 1px solid #eee;
+            }
+        }
+    }
+    .navigation{
+        overflow: hidden;
+        .prev{
+            float: left;
+        }
+        .next{
+            float: right;
+        }
+    }
+}
 pre{
-	border: 1px solid #eee;
+	border: 1px solid #ccc;
 	@include rhythm(1, 1, 1, 1 );
 	padding-left: 1rem;
 	padding-right: 1rem;
