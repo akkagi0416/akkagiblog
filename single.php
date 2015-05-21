@@ -18,5 +18,6 @@
         <span class="next"><?php next_post_link( '%link&raquo', '次の記事', TRUE ); ?></span>
     </div>
 </div><!-- //#main -->
+<?php get_template_part( 'sub' ); ?>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
