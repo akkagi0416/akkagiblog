@@ -53,7 +53,6 @@ header{
 			overflow: hidden;
             margin: 0 auto;
 			padding: 0;
-
 			li{
 				list-style: none;
 				float: left;
@@ -93,6 +92,10 @@ header{
                 }
                 &.money a:before{
                     content: "\f157";
+                }
+                &.current-menu-item,
+                &:hover{
+                    background-color: #ccc;
                 }
 			}
 		}
@@ -144,6 +147,38 @@ header{
             // border: none; 
         }
     }
+    .pagenate{
+        $color_pagenate : #337ab7;
+        overflow: hidden;
+        margin-left: 2%;
+        span,a{
+            float: left;
+            margin-left: -1px;
+            @include adjust-font-size-to(16px, 2);
+            padding-left: 1em;
+            padding-right: 1em;
+            @include box-sizing(border-box);
+            border: 1px solid $color_border;
+        }
+        a{
+            text-decoration: none;
+            color: $color_pagenate;
+            &:first-child{
+                @include border-radius(4px 0 0 4px);
+            }
+            &:last-child{
+                @include border-radius(0 4px 4px 0);
+            }
+            &:first-of-type{
+                margin-left: 0;
+            }
+        }
+        .current{
+            background-color: $color_pagenate;
+            border-color: $color_pagenate;
+            color: #fff;
+        }
+    }
 }
 #main.single{
     margin: 0 1em;
@@ -180,36 +215,62 @@ header{
         }
     }
 }
-.pagenate{
-    $color_pagenate : #337ab7;
-    overflow: hidden;
-    margin-left: 2%;
-    span,a{
-        float: left;
-        margin-left: -1px;
-        @include adjust-font-size-to(16px, 2);
-        padding-left: 1em;
-        padding-right: 1em;
-        @include box-sizing(border-box);
-        border: 1px solid $color_border;
+#sub{
+    .relation{
+        h2{
+            padding-left: 2%;
+            @include adjust-font-size-to(16px, 1);
+        }
+        ul{
+            padding: 0;
+            overflow: hidden;
+            li{
+                position: relative;
+                float: left;
+                width: 45%;
+                max-width: 150px;
+                margin: 0 2% 1em 2%;
+                list-style: none;
+                a{
+                    text-decoration: none;
+                }
+                img{
+                    width: 100%;
+                }
+                h3{
+                    width: 96%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    margin: 0;
+                    padding-left: 2%;
+                    padding-right: 2%;
+                    @include adjust-font-size-to(12px, 1);
+                    background-color: #333;
+                    color: #fff;
+                    font-weight: bold;
+                    @include opacity(0.9);
+                }
+            }
+        }
     }
-    a{
-        text-decoration: none;
-        color: $color_pagenate;
-        &:first-child{
-            @include border-radius(4px 0 0 4px);
+}
+#sidebar{
+    margin: 0 2% 0 2%;
+    aside{
+        ul{
+            padding: 0;
+            li{
+                list-style: none;
+                @include adjust-font-size-to(14px, 1);
+                &>ul{
+                    padding-left: 1em;
+                }
+            }
         }
-        &:last-child{
-            @include border-radius(0 4px 4px 0);
+        h2{
+            @include adjust-font-size-to(16px, 1);
         }
-        &:first-of-type{
-            margin-left: 0;
-        }
-    }
-    .current{
-        background-color: $color_pagenate;
-        border-color: $color_pagenate;
-        color: #fff;
     }
 }
 pre{

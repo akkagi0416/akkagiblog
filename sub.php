@@ -1,4 +1,4 @@
-
+<div id="sub">
     <div class="relation">
        <h2>関連記事</h2>
 <?php
@@ -22,8 +22,21 @@
         while( $my_query->have_posts() ) : $my_query->the_post();
 ?>
             <li>
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-                <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+                <a href="<?php the_permalink(); ?>">
+<?php
+            if( has_post_thumbnail() ) :
+?>
+                    <?php the_post_thumbnail(); ?>
+<?php
+            else :
+?>
+                    <img src="http://lorempixel.com/150/150/transport" alt="">
+<?php
+            endif;
+?>
+
+                <h3><?php the_title(); ?></h3>
+                </a>
             </li>
 <?php
         endwhile;
@@ -34,3 +47,4 @@
     endif;
 ?>
     </div><!-- //.relation -->
+</div><!-- //#sub -->
