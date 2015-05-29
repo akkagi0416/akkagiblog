@@ -9,6 +9,7 @@
 
 $category_num : 4;
 $color_border : #ddd;
+$color_link : #337ab7;
 
 // typography
 $base-font-size: 16px;
@@ -24,14 +25,18 @@ h1,h2,h3,h4,h5,h6{
 // h2{ @include adjust-font-size-to(36px, 2); }
 // h3{ @include adjust-font-size-to(24px, 1); }
 h1{ @include adjust-font-size-to(24px, 1); }
-h2{ @include adjust-font-size-to(16, 1); }
-h3{ @include adjust-font-size-to(16, 1); }
+h2{ @include adjust-font-size-to(16px, 1); }
+h3{ @include adjust-font-size-to(16px, 1); }
 hgroup h2,h4,h5,h6{ @include adjust-font-size-to(16px, 1); }
 p{ @include adjust-font-size-to(16px, 1); }
 pre{ @include adjust-font-size-to(14px, 0.8); }
 
 h1,h2,h3,h4,h5,h6,p,td,th,pre{
     color: #333;
+}
+a{
+    text-decoration: none;
+    color: $color_link;
 }
 
 header{
@@ -57,18 +62,24 @@ header{
         margin-right: 1em;
         padding-left: 0.5em;
         padding-right: 0.5em;
-        @include adjust-font-size-to(24px, 1);
+        @include adjust-font-size-to(20px, 1);
         @include rhythm-margins(0.3, 0.3);
         @include rhythm-padding(0.2, 0.2);
-        // @include border-radius(2px);
-        // background-color: #eee;
+        @include border-radius(4px);
+        background-color: #bbb;
         // border: 1px solid #aaa;
         // @include box-sizing(border-box);
-        color: #666;
+        // color: #666;
+        color: #fff;
     }
     form{
         clear: both;
         display: none;
+        margin-left: 2%;
+        margin-bottom: 1em;
+        input{
+            // border-color: #333;
+        }
     }
 	nav{
         clear: both;
@@ -83,7 +94,8 @@ header{
                 @include border-radius(4px);
                 @include box-sizing(border-box);
 				border: 1px solid #fff;
-				background-color: #f5f5f5;
+				// background-color: #f5f5f5;
+				background-color: #eee;
 				color: #fff;
 
                 a{
@@ -151,6 +163,7 @@ header{
                 @include rhythm-margins(0, 0);
                 @include rhythm-padding(0.3, 0.1);
                 white-space: nowrap;
+                color: $color_link;
             }
             p{
                 @include adjust-font-size-to(12px, 0.5);
@@ -294,6 +307,9 @@ header{
         h2{
             @include adjust-font-size-to(16px, 1);
         }
+        a{
+            color: $color_link;
+        }
     }
 }
 pre{
@@ -306,6 +322,7 @@ pre{
     position: fixed;
     bottom: 2%;
     right: 5%;
+    z-index: 100;
 
     a{
         @include text-shadow(1px 1px 0 #fff);
