@@ -10,6 +10,11 @@
     </head>
     <body>
         <header>
-        <h1><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a></h1>
-        <nav><?php wp_nav_menu(); ?></nav>
+            <h1><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'title' ); ?></a></h1>
+            <p class="search"><i class="fa fa-search"></i></p>
+            <form role="search" method="get" class="searchform" action="<?php home_url( '/' ); ?>">
+                <input type="text" value name="s" placeholder="検索...">
+                <input type="submit" value="検索">
+            </form>
+            <nav><?php wp_nav_menu(); ?></nav>
         </header>
