@@ -68,8 +68,10 @@ header{
     }
     form{
         clear: both;
+        display: none;
     }
 	nav{
+        clear: both;
 		ul{
 			overflow: hidden;
             margin: 0 auto;
