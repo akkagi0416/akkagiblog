@@ -1,4 +1,4 @@
-<div id="sidebar">
+<div class="sidebar">
     <aside>
         <ul>
             <?php dynamic_sidebar(); ?>

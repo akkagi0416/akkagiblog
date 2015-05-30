@@ -1,7 +1,7 @@
 jQuery(function( $ ){
     /* search form display on/off */
     $('.search').click(function(){
-        $('.searchform').toggle(200);
+        $('.searchform').toggle(400);
     });
 
     /* goto top */
@@ -17,4 +17,8 @@ jQuery(function( $ ){
         $('html,body').animate({scrollTop:0}, '500');
         return false;
     });
+});
+jQuery(window).load(function(){
+    var h = jQuery('.main article').height();
+    jQuery('.main article a').css('height', h);
 });

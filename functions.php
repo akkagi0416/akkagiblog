@@ -17,3 +17,8 @@ function my_scripts(){
     wp_enqueue_script( 'myscript', get_template_directory_uri() . '/js/myscript.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts' );
+
+function new_excerpt_more($more){
+    return '…';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );

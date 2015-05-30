@@ -1,4 +1,4 @@
-<div id="sub">
+<div class="secondary">
     <div class="relation">
        <h2>関連記事</h2>
 <?php
@@ -47,4 +47,4 @@
     endif;
 ?>
     </div><!-- //.relation -->
-</div><!-- //#sub -->
+</div><!-- //.secondary -->
