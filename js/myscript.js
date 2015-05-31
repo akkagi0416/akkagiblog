@@ -19,6 +19,6 @@ jQuery(function( $ ){
     });
 });
 jQuery(window).load(function(){
-    var h = jQuery('.main article').height();
-    jQuery('.main article a').css('height', h);
+    var h = jQuery('.main section').height();
+    jQuery('.main section a').css('height', h);
 });

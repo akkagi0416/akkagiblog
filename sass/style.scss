@@ -149,7 +149,7 @@ header{
 }
 
 .primary{
-    article{
+    section{
         overflow: hidden;
         padding-top: 5px;
         border-bottom: 1px solid $color_border; 
@@ -237,11 +237,14 @@ header{
         }
     }
 }
-.primary.single{
-    margin: 0 1em;
+.single{
+    margin: 0 2%;
     article{
         overflow: auto;
         border-bottom-style: none;
+        h2{
+            @include adjust-font-size-to(20px, 1);
+        }
         p, li{
             @include adjust-font-size-to(14px, 1);
         }
@@ -263,6 +266,9 @@ header{
         }
     }
     .navigation{
+        span{
+            color: $color_link;
+        }
         overflow: hidden;
         .prev{
             float: left;
@@ -343,6 +349,14 @@ pre{
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
+footer{
+    clear: both;
+    height: 60px;
+    padding-top: 20px;
+    text-align: center;
+    small{
+    }
+}
 .pagetop{
     position: fixed;
     bottom: 2%;
@@ -377,6 +391,7 @@ pre{
             clear: none;
             display: block;
             float: right;
+            margin-right: 3%;
             @include rhythm-margins(0.5, 0.5);
             input{
                 border: 1px solid #ccc;
@@ -412,9 +427,9 @@ pre{
     .contents{
         .main{
             float: left;
-            width: 75%;
+            width: 70%;
             .primary{
-                article{
+                section{
                     margin-bottom: 1em;
                     border-bottom: none;
                     .content{

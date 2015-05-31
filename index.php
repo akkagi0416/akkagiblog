@@ -3,10 +3,17 @@
     <div class="main">
         <div class="primary">
 <?php
+    if( is_search() ) :
+?>
+            <h2>検索結果: <span><?php the_search_query();?></span></h2>
+<?php
+    endif;
+?>
+<?php
     if( have_posts() ) :
         while( have_posts() ) : the_post();
 ?>
-            <article>
+            <section>
                 <a href="<?php the_permalink(); ?>">
                     <div class="thumbnail">
 <?php
@@ -27,7 +34,7 @@
                         <?php the_excerpt(); ?>
                     </div><!-- //.content -->
                 </a>
-            </article>		
+            </section>		
 <?php
         endwhile;
     endif;
