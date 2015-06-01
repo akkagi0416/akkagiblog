@@ -6,6 +6,7 @@ register_sidebar();
 
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'thumb150', 150, 150 );
+set_post_thumbnail_size(150,150,true);  // true:切り抜き false:リサイズ
 
 /*
 function my_scripts(){
