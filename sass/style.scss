@@ -44,6 +44,9 @@ a{
         color: $color_link_hover;
     }
 }
+code,kdb,pre,samp{
+    font-family: Consolas,monospace;
+}
 
 header{
 	h1{
@@ -247,21 +250,31 @@ header{
         border-bottom-style: none;
         h2{
             @include adjust-font-size-to(20px, 1);
+            padding-bottom: 10px;
+            padding-left: 0.5em;
+            border-bottom: 3px solid #333;
         }
         p, li{
-            @include adjust-font-size-to(14px, 1);
+            @include adjust-font-size-to(15px, 1);
+        }
+        p{
+            margin-bottom: 2em;
+            line-height: 1.8;
         }
         time{
             color: #999;
         }
-        ul{
+        p + ul, 
+        p + ol{
+            margin-top: -1em;
             padding: 0 0 0 2em;
         }
         table{
             th,td{
                 padding-left: 1em;
                 padding-right: 1em;
-                @include adjust-font-size-to(12px, 1);
+                padding: 0.2em 1em;
+                @include adjust-font-size-to(14px, 1);
             }
             th{
                 border-bottom: 1px solid $color_border;

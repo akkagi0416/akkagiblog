@@ -15,6 +15,10 @@
         endwhile;
     endif;
 ?>
+<p>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="akkagi0416" data-size="large">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</p>
             <div class="navigation">
                 <span class="prev"><?php previous_post_link( '&laquo;%link', '前の記事', TRUE ); ?></span>
                 <span class="next"><?php next_post_link( '%link&raquo', '次の記事', TRUE ); ?></span>
