@@ -1,4 +1,8 @@
 <?php
+// wp_headの不要なものを削除
+remove_action( 'wp_head', 'wp_generator' );
+remove_action( 'wp_head', 'wp_shortlink_wp_head' );
+
 
 register_nav_menus( array( 'nav' => 'ナビゲーション' ) );
 
