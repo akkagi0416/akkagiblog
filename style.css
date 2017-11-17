@@ -959,11 +959,15 @@ header nav ul li.current-menu-item, header nav ul li:hover {
 .sidebar {
   margin: 0 2% 0 2%;
 }
-/* line 375, sass/style.scss */
+/* line 376, sass/style.scss */
+.sidebar aside > ul > li {
+  margin-bottom: 3rem;
+}
+/* line 380, sass/style.scss */
 .sidebar aside ul {
   padding: 0;
 }
-/* line 377, sass/style.scss */
+/* line 382, sass/style.scss */
 .sidebar aside ul li {
   list-style: none;
   font-size: 14px;
@@ -971,16 +975,16 @@ header nav ul li.current-menu-item, header nav ul li:hover {
   line-height: 24px;
   line-height: 1.5rem;
 }
-/* line 380, sass/style.scss */
+/* line 385, sass/style.scss */
 .sidebar aside ul li > ul {
   padding-left: 1em;
 }
-/* line 387, sass/style.scss */
+/* line 392, sass/style.scss */
 .sidebar aside .widget_recent_entries ul li {
   margin-bottom: 1rem;
   line-height: 1.5;
 }
-/* line 391, sass/style.scss */
+/* line 396, sass/style.scss */
 .sidebar aside .widget_recent_entries ul li:before {
   display: inline-block;
   content: "";
@@ -989,19 +993,19 @@ header nav ul li.current-menu-item, header nav ul li:hover {
   background-color: #ccc;
   border-radius: 100%;
 }
-/* line 402, sass/style.scss */
+/* line 407, sass/style.scss */
 .sidebar aside h2 {
   font-size: 16px;
   font-size: 1rem;
   line-height: 24px;
   line-height: 1.5rem;
 }
-/* line 405, sass/style.scss */
+/* line 410, sass/style.scss */
 .sidebar aside a {
   color: #337ab7;
 }
 
-/* line 410, sass/style.scss */
+/* line 415, sass/style.scss */
 pre {
   border: 1px solid #ddd;
   margin-top: 24px;
@@ -1016,7 +1020,7 @@ pre {
   padding-right: 1rem;
 }
 
-/* line 416, sass/style.scss */
+/* line 421, sass/style.scss */
 footer {
   clear: both;
   height: 60px;
@@ -1024,14 +1028,14 @@ footer {
   text-align: center;
 }
 
-/* line 424, sass/style.scss */
+/* line 429, sass/style.scss */
 .pagetop {
   position: fixed;
   bottom: 2%;
   right: 5%;
   z-index: 100;
 }
-/* line 430, sass/style.scss */
+/* line 435, sass/style.scss */
 .pagetop a {
   text-shadow: 1px 1px 0 #fff;
   font-size: 48px;
@@ -1042,11 +1046,11 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  /* line 439, sass/style.scss */
+  /* line 444, sass/style.scss */
   header {
     margin: 0 auto 1em auto;
   }
-  /* line 441, sass/style.scss */
+  /* line 446, sass/style.scss */
   header h1 {
     height: 36px;
     padding-left: 60px;
@@ -1061,11 +1065,11 @@ footer {
     background: url("img/logo.svg") no-repeat 10px -2px;
     background-size: 36px 36px;
   }
-  /* line 451, sass/style.scss */
+  /* line 456, sass/style.scss */
   header .search {
     display: none;
   }
-  /* line 454, sass/style.scss */
+  /* line 459, sass/style.scss */
   header .searchform {
     clear: none;
     display: block;
@@ -1076,7 +1080,7 @@ footer {
     margin-bottom: 12px;
     margin-bottom: 0.75rem;
   }
-  /* line 460, sass/style.scss */
+  /* line 465, sass/style.scss */
   header .searchform input {
     border: 1px solid #ccc;
     -moz-border-radius: 3px;
@@ -1085,7 +1089,7 @@ footer {
     font-size: 12px;
     padding: 0.4rem;
   }
-  /* line 467, sass/style.scss */
+  /* line 472, sass/style.scss */
   header .searchform input[type="submit"] {
     padding: 0.4rem 0.7rem;
     font-weight: normal;
@@ -1096,38 +1100,38 @@ footer {
     -webkit-border-radius: 3px;
     border-radius: 3px;
   }
-  /* line 478, sass/style.scss */
+  /* line 483, sass/style.scss */
   header nav ul li {
     height: 48px;
   }
-  /* line 480, sass/style.scss */
+  /* line 485, sass/style.scss */
   header nav ul li a {
     font-size: 16px;
     font-size: 1rem;
     line-height: 48px;
     line-height: 3rem;
   }
-  /* line 482, sass/style.scss */
+  /* line 487, sass/style.scss */
   header nav ul li a:before {
     display: inline;
     padding-right: 0.5rem;
   }
 
-  /* line 492, sass/style.scss */
+  /* line 497, sass/style.scss */
   .contents .main {
     float: left;
     width: 65%;
   }
-  /* line 496, sass/style.scss */
+  /* line 501, sass/style.scss */
   .contents .main .primary section {
     margin-bottom: 2em;
     border-bottom: none;
   }
-  /* line 499, sass/style.scss */
+  /* line 504, sass/style.scss */
   .contents .main .primary section .content {
     margin-left: 1%;
   }
-  /* line 501, sass/style.scss */
+  /* line 506, sass/style.scss */
   .contents .main .primary section .content h2 {
     font-size: 16px;
     font-size: 1rem;
@@ -1143,7 +1147,7 @@ footer {
     padding-bottom: 0.15rem;
     white-space: normal;
   }
-  /* line 507, sass/style.scss */
+  /* line 512, sass/style.scss */
   .contents .main .primary section .content p {
     font-size: 14px;
     font-size: 0.875rem;
@@ -1159,7 +1163,7 @@ footer {
     padding-bottom: 0.3rem;
     white-space: normal;
   }
-  /* line 513, sass/style.scss */
+  /* line 518, sass/style.scss */
   .contents .main .primary section .content time {
     font-size: 12px;
     font-size: 0.75rem;
@@ -1174,13 +1178,13 @@ footer {
     padding-bottom: 5px;
     padding-bottom: 0.3rem;
   }
-  /* line 522, sass/style.scss */
+  /* line 527, sass/style.scss */
   .contents .sidebar {
     float: right;
     width: 25%;
   }
 
-  /* line 528, sass/style.scss */
+  /* line 533, sass/style.scss */
   .pagetop a {
     text-shadow: 1px 1px 0 #fff;
     font-size: 64px;
@@ -1188,18 +1192,18 @@ footer {
     line-height: 96px;
     line-height: 6rem;
   }
-  /* line 531, sass/style.scss */
+  /* line 536, sass/style.scss */
   .pagetop a:hover {
     color: #666;
   }
 }
 @media screen and (min-width: 1024px) {
-  /* line 539, sass/style.scss */
+  /* line 544, sass/style.scss */
   header {
     max-width: 1024px;
   }
 
-  /* line 543, sass/style.scss */
+  /* line 548, sass/style.scss */
   .contents {
     max-width: 1024px;
     margin: 0 auto;

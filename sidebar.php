@@ -8,22 +8,25 @@
   .kabu{
     font-size: 0.9rem;
   }
-  .kabu h3{
-    margin-bottom: 0.25rem;
-    font-weight: normal;
-  }
+  // .kabu h2{
+  //   margin-bottom: 0.25rem;
+  //   // font-weight: normal;
+  // }
   .kabu table{
     margin-bottom: 1rem;
+    margin-left: 1rem;
   }
   .kabu table th,
   .kabu table td{
     padding-right: 1rem;
     text-align: left;
     font-weight: normal;
-    font-size: 0.8rem;
+    // font-size: 0.8rem;
+    font-size: 0.75rem;
+    line-height: 1.7;
   }
-  .kabu p{
-    margin: 0;
+  .kabu .total td{
+    font-size: 0.85rem;
   }
   </style>
   <aside class="kabu">
@@ -36,7 +39,7 @@
       $rate_month = explode(',', $file[3])[1];  // 月初来
 
     $html = <<<TABLE_HEADER
-    <h3>保有銘柄($date)@SBI</h3>
+    <h2>保有銘柄($date)@SBI</h2>
     <table>
       <tr>
         <th>順位</th>
@@ -53,7 +56,7 @@ TABLE_HEADER;
         echo '<tr><td>' . $rank . '</td><td>' . $name . '</td><td>' . $rate . '</td></tr>';
       }
       echo '</table>';
-      echo '<table>';
+      echo '<table class="total">';
       echo '<tr><td>総額</td><td>' . number_format($total) . '円</td></tr>';
       echo '<tr><td>年初来</td><td>' . $rate_year . '%</td></tr>';
       echo '<tr><td>月初来</td><td>' . $rate_month . '%</td></tr>';

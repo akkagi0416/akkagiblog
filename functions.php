@@ -27,3 +27,16 @@ function new_excerpt_more($more){
     return '…';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+// header内に任意のコードを読み込む
+// https://www.wapoo-custom.com/custom_manual/head-tag-custum/
+function head_original_load(){
+  if(is_single() || is_page()){
+    if($head_original_code = get_post_meta(get_the_ID(), 'head_load', false)){
+      foreach($head_original_code as $head_code){
+        echo $head_code . "\n";
+      }
+    }
+  }
+}
+add_action('wp_head', 'head_original_load');

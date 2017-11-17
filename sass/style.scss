@@ -372,6 +372,11 @@ header{
 .sidebar{
     margin: 0 2% 0 2%;
     aside{
+        &>ul{
+          &>li{
+            margin-bottom: 3rem;
+          }
+        }
         ul{
             padding: 0;
             li{
